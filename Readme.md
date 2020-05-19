@@ -1,7 +1,7 @@
 # Личный проект «Нёрдс»
 
 * Студент: [Руслан Васильев](https://up.htmlacademy.ru/htmlcss/28/user/1223311).
-* Наставник: [Александр Морозов] (https://htmlacademy.ru/profile/id91583).
+* Наставник: [Александр Морозов](https://htmlacademy.ru/profile/id91583).
 
 ---
 

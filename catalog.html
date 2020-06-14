@@ -10,15 +10,16 @@
 <header>
   <nav>
     <a href="index.html">
-			<img src="https://via.placeholder.com/150x100" alt="Логотип Нёрдс">
-	</a>
+			<img src="img/nerds-logo.svg" alt="Нёрдс">
+	  </a>
     <ul>
 		<li><a href="">Студия</a></li>
 		<li><a href="">Клиенты</a></li>
 		<li><a href="catalog.html">Магазин</a></li>
-        <li><a href="">Контакты</a></li>	
+    <li><a href="">Контакты</a></li>	
     </ul>
-    <a href="">Корзина</a>
+    <a href="">
+      <img src="img/cart-icon.svg" alt="Нёрдс">Корзина</a>
   </nav>
 </header>
 
@@ -30,13 +31,54 @@
 	</section>
 	<section>
     <h2>Сетка:</h2>
-    <!-- Здесь будет форма фильтра -->
+    <ui>
+      <li>
+<!--        <object
+        type="img/radio-on.svg"
+        data="radio-on.svg">
+        <img
+          src="radio-on.svg">
+        </object>
+      -->
+        <img src="img/radio-on.svg" alt="Нёрдс">
+        <p>Адаптивная</p>
+      </li>
+      <li>
+        <img src="img/radio-off.svg" alt="Нёрдс">
+        <p>Фиксированная</p>
+      </li>
+      <li>
+        <img src="img/radio-off.svg" alt="Нёрдс">
+        <p>Резиновая</p>
+      </li>
+    </ui>
 	</section>
 	<section>
     <h2>Особенности:</h2>
-    <!-- Здесь будет форма фильтра -->
+    <ui>
+      <li>
+        <img src="img/checkbox-on.svg" alt="Нёрдс">
+        <p>Слайдер</p>
+      </li>
+      <li>
+        <img src="img/checkbox-off.svg" alt="Нёрдс">
+        <p>Блок преимуществ</p>
+      </li>
+      <li>
+        <img src="img/checkbox-on.svg" alt="Нёрдс">
+        <p>Новости</p>
+      </li>
+      <li>
+        <img src="img/checkbox-off.svg" alt="Нёрдс">
+        <p>Галерея</p>
+      </li>
+      <li>
+        <img src="img/checkbox-off.svg" alt="Нёрдс">
+        <p>Корзина</p>
+      </li>
+    </ui>
 	</section>
-	<button onclick="window.location.href = '';">Показать</button>
+	<button type="button">Показать</button>
 	<section>
 	<h2>Сортировать</h2>
 	<!-- Здесь будет форма фильтра -->
@@ -48,10 +90,12 @@
 	<ul>
       <li>
         <a href="">
+          <p>           
+            <img src="img/browser.svg" alt="Sedona">
+            <img src="img/Mask Group.jpg" alt="Sedona">
+          </p>
           <h3>Sedona</h3>
-          <p>
-            <img src="https://via.placeholder.com/150x100" alt="Sedona">
-          </p>
+          <p>Информационный сайт для туристов</p>
         </a>
         <p>
           <button type="button">9900 ₽</button>
@@ -59,10 +103,11 @@
       </li>
       <li>
          <a href="">
+          <p>
+            <img src="img/browser.svg" alt="Pink">
+            <img src="img/Mask Group_1.jpg" alt="Pink">
+          </p>
           <h3>Pink</h3>
-          <p>
-            <img src="https://via.placeholder.com/150x100" alt="Pink">
-          </p>
         </a>
         <p>
           <button type="button">9900 ₽</button>
@@ -70,10 +115,11 @@
       </li>
       <li>
          <a href="">
+          <p>
+            <img src="img/browser.svg" alt="Borodinski">
+            <img src="img/Mask Group_2.jpg"  alt="Borodinski">
+          </p>
           <h3>Borodinski</h3>
-          <p>
-            <img src="https://via.placeholder.com/150x100" alt="Borodinski">
-          </p>
         </a>
         <p>
           <button type="button">9900 ₽</button>
@@ -81,33 +127,36 @@
       </li>
       <li>
          <a href="">
+          <p>
+            <img src="img/browser.svg" alt="Mishka">
+            <img src="img/Mask Group_3.jpg" alt="Mishka">
+          </p>
           <h3>Mishka</h3>
-          <p>
-            <img src="https://via.placeholder.com/150x100" alt="Mishka">
-          </p>
         </a>
         <p>
           <button type="button">9900 ₽</button>
         </p>
       </li>
       <li>
-         <a href="">
-          <h3>A+</h3>
-          <p>
-            <img src="https://via.placeholder.com/150x100" alt="A+">
-          </p>
+        <a href="">
+        <p>
+          <img src="img/browser.svg" alt="A+">
+          <img src="img/Mask Group_4.jpg" alt="A+">
+        </p>          
+        <h3>A+</h3>
         </a>
         <p>
           <button type="button">9900 ₽</button>
         </p>
       </li>
-	        <li>
+	    <li>
          <a href="">
-          <h3>КВАСТ</h3>
-          <p>
-            <img src="https://via.placeholder.com/150x100" alt="КВАСТ">
-          </p>
-        </a>
+         <p>
+            <img src="img/browser.svg" alt="КВАСТ">
+            <img src="img/Mask Group_5.jpg" alt="КВАСТ">
+         </p>
+         <h3>КВАСТ</h3>
+         </a>
         <p>
           <button type="button">9900 ₽</button>
         </p>
@@ -135,7 +184,7 @@
 	<p>191186, Санкт-Петербург,</p>
 	<p>	ул. Б. Конюшенная, д. 19/8</p><br>
 	<p>тел. +7 (812) 275-75-75</p><br>
-	<button onclick="window.location.href = '';">НАПИШИТЕ НАМ</button>
+	<button type="button">НАПИШИТЕ НАМ</button>
 	<p><a href="#"><img src="https://via.placeholder.com/50x50" width="50" height="50" alt="Нёрдс_метка"></a></p>
 	<!-- Здесь будет карта -->
 	</section>
@@ -143,15 +192,15 @@
 		<h2>Давайте дружить, это выгодно!</h2>
 		<p>Скидка 10% для друзей из социальных сетей</p>
 		<ul>
-		  <li>
-			<a href="#">Вконтакте</a>
-		  </li>
-		  <li>
-			<a href="#">Фейсбук</a>
-		  </li>
-		  <li>
-			<a href="#">Инстаграм</a>
-		  </li>
+      <li>
+        <a href="#"><img src="img/vk-icon.svg" alt="Вконтакте">Вконтакте</a>
+      </li>
+      <li>
+        <a href="#"><img src="img/fb-icon.svg" alt="Фейсбук">Фейсбук</a>
+      </li>
+      <li>
+        <a href="#"><img src="img/insta-icon.svg" alt="Инстаграм">Инстаграм</a>
+      </li>
 		</ul>
 	</section>
 	<p>

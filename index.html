@@ -112,18 +112,18 @@
 	<form action="https://echo.htmlacademy.ru" method="post">
 		<p>
 			<label for="appointment-name">Ваше имя:</label>
-			<input id="appointment-name" type="text" name="name" placeholder="Имя и Фамилия" required>
+			<input id="appointment-name" type="text" name="name" placeholder="Имя и Фамилия" tabindex="1" required>
 		</p>
 		<p>
 			<label for="appointment-email">Ваш email:</label>
 			<input id="appointment-email" type="email" name="email"
-			placeholder="email@example.com" required>
+			placeholder="email@example.com" tabindex="2" required>
 		</p>	
 		<p>
 			<label for="text">Текст письма:</label>
 		</p>
 		<p>
-      		<textarea name="text" id="text" rows="10">В свободной форме</textarea>
+      		<textarea name="text" id="text" rows="10" tabindex="3">В свободной форме</textarea>
 		</p>
 		<button type="submit">Отправить</button>
 	</form>

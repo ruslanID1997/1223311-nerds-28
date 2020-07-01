@@ -276,51 +276,15 @@ img {
   list-style: none;
 }
 
-.htmlacademy {
+.logo-picture {
 	opacity: 0.2;
 }
 
-.htmlacademy:hover {
+.logo-picture:hover {
 	opacity: 1.0;
 }
 
-.htmlacademy:active {
-	opacity: 0.1;
-}
-
-.borodinski {
-	opacity: 0.2;
-}
-
-.borodinski:hover {
-	opacity: 1.0;
-}
-
-.borodinski:active {
-	opacity: 0.1;
-}
-
-.pink {
-	opacity: 0.2;
-}
-
-.pink:hover {
-	opacity: 1.0;
-}
-
-.pink:active {
-	opacity: 0.1;
-}
-
-.mishka {
-	opacity: 0.2;
-}
-
-.mishka:hover {
-	opacity: 1.0;
-}
-
-.mishka:active {
+.logo-picture:active {
 	opacity: 0.1;
 }
 

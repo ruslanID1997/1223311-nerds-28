@@ -319,23 +319,32 @@ img {
   list-style: none;
 }
 
-.vk-button {
-  padding: 33px 28px 33px 28px;
+.social-list li {
+  margin-right: 11px;
+}
+
+.social-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: var(--basic-neutral);
-  width: 81px;
-  height: 81px;
-  border-radius: 100px;
-  margin-right: 10px;
+  width: 79px;
+  height: 79px;
+  border-radius: 100%;
   outline: none
 }
 
-.vk-button:hover{
+.social-item:hover{
   background-color: var(--special-on-red);
 }
 
-.vk-button:focus{
+.social-item:focus{
   background-color: var(--special-click-red);
   box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+}
+
+.social-item:active .icon-opacity {
+  opacity: 0.3;
 }
 
 .vkicon {
@@ -343,65 +352,14 @@ img {
   height: 15px;
 }
 
-.vkicon:active{
-  opacity: 0.3;
-}
-
-.fb-button {
-  padding: 31px 35px 28px 34px;
-  background-color: var(--basic-neutral);
-  width: 81px;
-  height: 81px;
-  border-radius: 100px;
-  margin-right: 9px;
-  outline: none
-}
-
-.fb-button:hover{
-  background-color: var(--special-on-red);
-  opacity: 1.0;
-}
-
-.fb-button:focus{
-  background-color: var(--special-click-red);
-  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
-}
-
 .fbicon {
   width: 12px;
   height: 22px;
 }
 
-.fbicon:active{
-  opacity: 0.3;
-}
-
-.insta-button {
-  padding: 30px 30px;
-  background-color: var(--basic-neutral);
-  width: 81px;
-  height: 81px;
-  border-radius: 100px;
-  outline: none
-}
-
-.insta-button:hover{
-  background-color: var(--special-on-red);
-  opacity: 1.0;
-}
-
-.insta-button:focus{
-  background-color: var(--special-click-red);
-  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
-}
-
 .instaicon {
   width: 21px;
   height: 21px;  
-}
-
-.instaicon:active{
-  opacity: 0.3;
 }
 
 .inner-page {
@@ -661,6 +619,7 @@ img {
 
 .button.btn-page {
   background-color: var(--basic-dark-white);
+  border: 3px solid var(--basic-dark-white); 
   color: var(--basic-black);
 }
 
@@ -685,7 +644,7 @@ page-numbers .page {
   margin-right: 10px;
 }
 
-.page .button {
+.pagination-item .button {
   padding: 0;
   min-width: 50px;
   min-height: 50px;
@@ -693,14 +652,16 @@ page-numbers .page {
   line-height: 50px;
 }
 
-.page .btn-page .active {
-  border: 2px solid var(--basic-on-grey);  
+.pagination-item .btn-page.active {
+  background-color: rgba(0, 0, 0, 0.0001);
+  border: 3px solid var(--basic-on-grey);  
   line-height: 50px;
 }
 
-.page .btn-next {
+.pagination-item .btn-next {
   padding-left: 80px;
   padding-right: 80px;
+  border: 3px solid var(--basic-dark-white); 
 }
 
 .template-name {

@@ -9,10 +9,9 @@
   </head>
   
   <body class="page-body">
-		<div class="head-title">
 		<h1 class="visually-hidden">Дизайн-студия Нёрдс</h1>
-		<header>
-			<nav class="main-navigation-wrapper">
+		<header class="site-header">
+			<nav class="wrapper">
 				<a class="main-header-logo">
 					<img src="img/nerds-logo.svg" width="160" height="65" alt="Магазин Нёрдс">
 				</a>
@@ -27,76 +26,74 @@
 		</header>
 		<main class="main-page">
 			<section class="opportunities">
-			<h2 class="visually-hidden">Обзор возможностей</h2>
-				<input class="visually-hidden" type="radio" name="swipe" id="pic-1" checked>
-				<input class="visually-hidden" type="radio" name="swipe" id="pic-2">
-				<input class="visually-hidden" type="radio" name="swipe" id="pic-3">
-				<!-- <ul>
-					<li class="pic"><button type="button">Кнопка 1</button></li>
-					<li class="pic"><button type="button">Кнопка 2</button></li>
-					<li class="pic"><button type="button">Кнопка 3</button></li>
-					</ul> -->
-				<ul class="advantages-list">
-					<li>
-						<div class="advantages-content">
-							<p class="main_advantages-item">Долго, дорого, <br>скрупулёзно</p>
-							<p class="rede">Математически выверенный дизайн<br>для вашего сайта или приложения</p>
-							<a class="button" href="">Узнать больше</a>
-							<img src="img/nerds-index-slide1_1.png" width="760" height="431" alt="Дизайн продуктов">
-						</div>
-					</li>
-					<li>
-						<div class="advantages-content">
-							<p class="main_advantages-item">Дорого, долго, <br>скрупулёзно</p>
-							<p class="rede">Математически невыверенный дизайн<br>для чужого сайта или приложения</p>
-							<a class="button" href="">Узнать больше</a>
-							<img src="img/nerds-index-slide1_1.png" width="760" height="431" alt="Дизайн продуктов">			
-						</div>
-					</li>
-					<li>
-						<div class="advantages-content">
-							<p class="main_advantages-item">Дорого, скрупулёзно, <br>долго</p>
-							<p class="rede">Физически выверенный дизайн<br>для нашего сайта или приложения</p>
-							<a class="button" href="">Узнать больше</a>
-							<img src="img/nerds-index-slide1_1.png" width="760" height="431" alt="Дизайн продуктов">
-						</div>			
-					</li>		
-				</ul>
+				<h2 class="visually-hidden">Обзор возможностей</h2>
+				<div class="wrapper opportunities-owrapper">
+					<input class="visually-hidden" type="radio" name="toogle" id="slide-1" checked>
+					<input class="visually-hidden" type="radio" name="toogle" id="slide-2">
+					<input class="visually-hidden" type="radio" name="toogle" id="slide-3">
+					<div class="slider-controls">
+						<label class="slider-controls-item slider-controls-item--1" for="slide-1">Слайд 1</label>
+						<label class="slider-controls-item slider-controls-item--2" for="slide-2">Слайд 2</label>
+						<label class="slider-controls-item slider-controls-item--3" for="slide-3">Слайд 3</label>
+					</div>	
+					<ul class="advantages-list">
+						<li class="advantages-list-item slide-1">
+							<div class="advantages-content">
+								<p class="main-advantages-item">Долго, дорого,<br>скрупулёзно</p>
+								<p class="rede">Математически выверенный дизайн<br>для вашего сайта или мобильного приложения</p>
+								<a class="button" href="">Узнать больше</a>
+							</div>
+						</li>
+						<li class="advantages-list-item slide-2">
+							<div class="advantages-content">
+								<p class="main-advantages-item">Дорого, долго,<br>скрупулёзно</p>
+								<p class="rede">Математически невыверенный дизайн<br>для чужого сайта или приложения</p>
+								<a class="button" href="">Узнать больше</a>		
+							</div>
+						</li>
+						<li class="advantages-list-item slide-3">
+							<div class="advantages-content">
+								<p class="main-advantages-item">Дорого, скрупулёзно, <br>долго</p>
+								<p class="rede">Физически выверенный дизайн<br>для нашего сайта или приложения</p>
+								<a class="button" href="">Узнать больше</a>
+							</div>			
+						</li>		
+					</ul>
+				</div>
 			</section>
-		</div>
-		<div class="overview-about">
-			<section class="overview">
+		<div class="wrapper">
+			<section>
 			<h2 class="visually-hidden">Обзор продуктов</h2>
 			<ul class="overview-list">
-				<li>
+				<li class="overview-item">
 					<img src="img/web-sites.png" width="300" height="146" alt="Веб-сайты">
-					<h3 class="overview-item">Веб-сайты</h3>
+					<h3>Веб-сайты</h3>
 					<p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
 					<a class="button" href="">Заказать</a>
 				</li>
-				<li>
+				<li class="overview-item">
 					<img src="img/apps.png" width="300" height="146" alt="Приложения">
-					<h3 class="overview-item">Приложения</h3>
+					<h3>Приложения</h3>
 					<p>Покорите топ-10 приложений в AppStore и Google Play</p>
-					<a class="button-green" href="">Заказать</a>
+					<a class="button button-green" href="">Заказать</a>
 				</li>
-				<li>
+				<li class="overview-item">
 					<img src="img/pres.png" width="300" height="146" alt="Презентации">
-					<h3 class="overview-item">Презентации</h3>
+					<h3>Презентации</h3>
 					<p>Вы даже не подозреваете, насколько вы изумительны!</p>
-					<a class="button-yellow" href="">Заказать</a>
+					<a class="button button-yellow" href="">Заказать</a>
 				</li>
 			</ul>
 			</section>
 				
-			<section>
+			<section class="exposition">
 			<h2 class="visually-hidden">Описание студии</h2>
 			<div class="about-studios">
-				<p class="main_lozung">Мы - маленькая, но гордая студия из Краснодара.</p>
-				<p>Исповедуем принципы минимализма и частоты. Ставим математический расчёт
+				<p class="about-lozung">Мы - маленькая, но гордая студия из Краснодара.</p>
+				<p class="about-comment">Исповедуем принципы минимализма и частоты. Ставим математический расчёт
 				превыше креатива. Работаем, не покладая рук, как роботы.</p>
 				<div class="about-make">
-					<p class="make-orders">Выполняем заказы на разработку:</p>
+					<p class="about-title">Выполняем заказы на разработку:</p>
 					<ul>
 						<li>
 							<p class="red-line">Веб-сайтов любой сложности</p>
@@ -112,58 +109,49 @@
 			</div>
 			<div class="statistics-studios">
 				<img src="img/nerds-illustration1.png" width="360" height="208" alt="Мы компания Нёрдс">
-				<p class="love-year">С 2004 года любим точность во всём:</p>
-				<ul class="static-list">
-					<li>
-						<p class="percent">146%</p>
-						<p>Уровень самоотдачи</p>
-					</li>
-					<li>
-						<p class="percent">100%</p>
-						<p>Соблюдение сроков</p>
-					</li>
-					<li>
-						<p class="percent">50%</p>
-						<p>Минимальная предоплата</p>
-					</li>
-				</ul>
+				<p>С 2004 года любим точность во всём:</p>
+				<table class="percents">
+					<tr class="percents-value">
+					  <td><b>146</b><sup>%</sup></td>
+					  <td><b>100</b><sup>%</sup></td>
+					  <td><b>50</b><sup>%</sup></td>
+					</tr>
+					<tr class="percents-name">
+					  <td>Уровень самоотдачи</td>
+					  <td>Соблюдение сроков</td>
+					  <td>Минимальная предоплата</td>
+					</tr>
+				</table>				
 			</div>
 			</section>
-
 			<section class="products">
 				<h2 class="visually-hidden">Обзор решений</h2>
-				<div class="logo-container">
-					<ul class="logo-list">
-						<li class="logo-picture"><a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/lg_1.png" width="199" height="68" alt="Заказы для HTMLAcademy"></a></li>
-						<li class="logo-picture"><a href="#"><img src="img/lg_2.png" width="209" height="90" alt="Заказы для BORODINSKY"></a></li>
-						<li class="logo-picture"><a href="#"><img src="img/lg_3.png" width="185" height="52" alt="Заказы для PINK"></a></li>
-						<li class="logo-picture"><a href="#"><img src="img/lg_4.png" width="173" height="84" alt="Заказы для MISHKA"></a></li>
-					</ul>
-				</div>
+				<ul class="logo-list">
+					<li class="logo-list-item htmlacademy"><a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/lg_1.png" width="199" height="68" alt="Заказы для HTMLAcademy"></a></li>
+					<li class="logo-list-item borodinski"><a href="#"><img src="img/lg_2.png" width="209" height="90" alt="Заказы для BORODINSKY"></a></li>
+					<li class="logo-list-item pink"><a href="#"><img src="img/lg_3.png" width="185" height="52" alt="Заказы для PINK"></a></li>
+					<li class="logo-list-item mishka"><a href="#"><img src="img/lg_4.png" width="173" height="84" alt="Заказы для MISHKA"></a></li>
+				</ul>
 			</section>
 		</div>
 			<section class="contacts">
 			<h2 class="visually-hidden">Контакты</h2>
-				<div class="contacts-write">
-					<h3 class="title-studio">NERDS DESIGN STUDIO</h3>
-					<p>191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8</p>
-					<p>тел. <a href="tel:+78122757575">+7 (812) 275-75-75</a></p>
-					<a class="button" href="">НАПИШИТЕ НАМ</a>
-					<div class="map-marker">
-					<p><a href="#"><img src="img/map-marker1.svg" width="231" height="190" alt="Нёрдс_метка"></a></p>
+				<div class="wrapper contacts-write">
+					<div class="write-window">
+						<h3>NERDS DESIGN STUDIO</h3>
+						<p class="address">191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8</p>
+						<p class="phone">тел. <a href="tel:+78122757575">+7 (812) 275-75-75</a></p>
+						<a class="button" href="">НАПИШИТЕ НАМ</a>
+					</div>
+					<div class="yandexmap">
+						<!-- Здесь будет карта -->
 					</div>
 				</div>
-			<img src="img/map1.png" width="1440" height="416" alt="map">
-			<!-- Здесь будет карта -->
 			</section>
 		</main>
 
 		<footer>
-			<div class="footer-social">
-			<section>
-				<h2 class="visually-hidden">Реклама</h2>
-				<p class="join">Давайте дружить, это выгодно!</p>
-				<p class="discount">Скидка 10% для друзей из социальных сетей</p>
+			<div class="wrapper footer-social">
 				<ul class="social-list">
 					<li>
 						<a class="social-item" href="#" aria-label="Наша страница Вконтакте"><img class="vkicon icon-opacity" src="img/vk-icon.svg" alt="Кнопка Вконтакте">
@@ -181,9 +169,12 @@
 						</a>
 					</li>
 				</ul>
-			</section>	
-			<p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>»</p>
+				<div class="be-friends">
+					<p class="join">Давайте дружить, это выгодно!</p>
+					<p class="discount">Скидка 10% для друзей из социальных сетей</p>
+				</div>
 			</div>
+			<p class="disclaimer">Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>»</p>
 		</footer>
 
 		<section class="window_form">

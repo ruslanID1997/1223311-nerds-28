@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="UTF-8">
     <title>Каталог — HTML Academy: «Нёрдс»</title>
@@ -10,7 +10,7 @@
 
   <body class="page-body inner-page">
     <div class="head-title">
-      <p class="visually-hidden">Дизайн-студия Нёрдс</p>
+      <h1 class="visually-hidden">Дизайн-студия Нёрдс</h1>
       <header class="main-header">
         <nav class="main-navigation-wrapper">
               <a class="main-header-logo" href="index.html">
@@ -24,15 +24,18 @@
               </ul>
               <a class="cart-navigation" href="">Корзина</a>
         </nav>
-        <h1 class="catalog_title">Магазин готовых шаблонов</h1>
-    </header>
-    </div>
+      </header>
     <main class="main-page">
+      <div class="heading">
+        <div class="catalog-title">
+            <h2>Магазин готовых шаблонов</h2>
+        </div>
+      </div>
       <div class="wrapper-main">
         <section class="filter">
           <h2 class="visually-hidden">Фильтр товаров:</h2>
           <form action="https://echo.htmlacademy.ru" method="post">
-            <fieldset class="filter-price">
+            <fieldset class="filter-category price">
               <legend>Стоимость:</legend>
                        <div class="range-filter">
                         <div class="range-controls">
@@ -49,133 +52,140 @@
                         </div>
                         </div>
             </fieldset>
-            <fieldset class="filters-grid">
+            <fieldset class="filter-category grid">
               <legend>Сетка:</legend>
-              <ul class="grid-list">
-                <li>
-                  <input type="radio" name="grid-group" value="adaptive" id="filter-adaptive" checked>
-                  <label class="filter-grid-radio" for="filter-adaptive">Адаптивная</label>
-                </li>
-                <li>
-                  <input type="radio" name="grid-group" value="fix" id="filter-fix">
-                  <label class="filter-grid-radio" for="filter-fix">Фиксированная</label>
-                </li>
-                <li>
-                  <input type="radio" name="grid-group" value="rubber" id="filter-rubber">
-                  <label class="filter-grid-radio" for="filter-rubber">Резиновая</label>
-                </li>
+                <label class="grid-radio-control">
+                  <input class="visually-hidden" type="radio" name="grid-group" value="adaptive" checked>
+                  <span class="filter-grid-radio"></span>
+                  <span>Адаптивная</span>
+                </label>
+                <label class="grid-radio-control">
+                  <input class="visually-hidden" type="radio" name="grid-group" value="fix">
+                  <span class="filter-grid-radio"></span>
+                  <span>Фиксированная</span>
+                </label>
+                <label class="grid-radio-control">
+                  <input class="visually-hidden" type="radio" name="grid-group" value="rubber">
+                  <span class="filter-grid-radio"></span>
+                  <span>Резиновая</span>
+                </label>
               </ul>
             </fieldset>
-            <fieldset class="filters-features">
+            <fieldset class="filter-category features">
               <legend>Особенности:</legend>
-              <ul class="features-list">
-                <li>
-                  <input type="checkbox" name="features-group" value="slide" id="filter-slide" checked>
-                  <label class="filter-features-checkbox" for="filter-slide">Слайдер</label>
-                </li>
-                <li>
-                  <input type="checkbox" name="benefits-group" value="benefits" id="filter-benefits">
-                  <label class="filter-features-checkbox" for="filter-benefits">Блок преимуществ</label>
-                </li>
-                <li>
-                  <input type="checkbox" name="news-group" value="news" id="filter-news" checked>
-                  <label class="filter-features-checkbox" for="filter-news">Новости</label>
-                </li>
-                <li>
-                  <input type="checkbox" name="gallery-group" value="gallery" id="filter-gallery">
-                  <label class="filter-features-checkbox" for="filter-gallery">Галерея</label>
-                </li>
-                <li>
-                  <input type="checkbox" name="cart-group" value="cart" id="filter-cart">
-                  <label class="filter-features-checkbox" for="filter-cart">Корзина</label>
-                </li>
-              </ul>
+                <label class="filter-features-checkbox">
+                  <input class="visually-hidden" type="checkbox" name="features-group" value="slide" checked>
+                  <span class="checkbox-indicator"></span>
+                  <span>Слайдер</span>
+                </label>
+                <label class="filter-features-checkbox">
+                  <input class="visually-hidden" type="checkbox" name="benefits-group" value="benefits">
+                  <span class="checkbox-indicator"></span>
+                  <span>Блок преимуществ</span>
+                </label>
+                <label class="filter-features-checkbox">
+                  <input class="visually-hidden" type="checkbox" name="news-group" value="news" checked>
+                  <span class="checkbox-indicator"></span>
+                  <span>Новости</span>
+                </label>
+                <label class="filter-features-checkbox">
+                  <input class="visually-hidden" type="checkbox" name="gallery-group" value="gallery">
+                  <span class="checkbox-indicator"></span>
+                  <span>Галерея</span>
+                </label>
+                <label class="filter-features-checkbox">
+                  <input class="visually-hidden" type="checkbox" name="cart-group" value="cart">
+                  <span class="checkbox-indicator"></span>
+                  <span>Корзина</span>
+                </label>
             </fieldset>
             <button type="submit" class="button btn-show-gray">Показать</button>
           </form>
         </section>
         <div class="sort-templates">
-          <section>
-            <h3 class="sort">Сортировать:</h3>
+          <section class="sort">
+            <h3>Сортировать:</h3>
             <ul class="sort-types">
               <li>
-                <a class="price" href="#">По цене</a>
+                <a href="#" class="active">По цене</a>
               </li>
               <li>
-                <a class="type" href="#">По типу</a>
+                <a href="#">По типу</a>
               </li>
               <li>
-                <a class="name" href="#">По названию</a>
+                <a href="#">По названию</a>
               </li>
             </ul>
-            <div>
-              <a href="#">
-                <img class="arrow-down" src=img/icon-down-dir.svg width="11" height="10" alt="убывание">
-              </a>
-              <a href="#">
+            <ul class="sort-order">
+              <li class="sort-order-down active">
+                <a href="#" class="sort-order-link active">
+                  <span class="visually-hidden">По убыванию</span>
+                  <img class="arrow-down" src=img/icon-down-dir.svg width="11" height="10" alt="убывание">
+                </a>
+              </li>
+              <li class="sort-order-up">
+              <a href="#" class="sort-order-link">
+                <span class="visually-hidden">По возрастанию</span>
                 <img class="arrow-up" src=img/icon-up-dir.svg width="11" height="10" alt="возрастание">
               </a>
-            </div>
+              </li>
           </section>
 
           <section class="templates">
             <h2 class="visually-hidden">Страницы продуктов</h2>
-            <!-- Вопрос: можно ли придумать своё описание для других карточек, кроме Sedona и Pink? -->
             <ul class="template-list">
-                <li class="template-item">
-                    <p>           
-                      <img src="img/MaskGroup.jpg" width="360" height="580" alt="Шаблон Sedona">
-                    </p>
+                <li class="template-list-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="360" height="40" viewBox="0 0 360 40"><path fill="#4D4D4D" d="M356 0H4C1.8 0 0 1.8 0 4v36h360V4c0-2.2-1.8-4-4-4zM22.991 27a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14z"/></svg>
+                    <img src="img/MaskGroup.jpg" width="360" height="580" alt="Шаблон Sedona">
                     <div class="template-card">
-                      <a class="template-name" href="">Sedona</a>
+                      <a href="">Sedona</a>
                       <p class="description">Информационный сайт<br>для туристов</p>
                       <!-- Сделать ссылками -->
                       <button type="button" class="button-buy">9900 ₽</a>
                     </div>
                 </li>
-                <li class="template-item">
-                    <p>
-                      <img src="img/MaskGroup_1.jpg" width="360" height="580" alt="Шаблон Pink">
-                    </p>
+                <li class="template-list-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="360" height="40" viewBox="0 0 360 40"><path fill="#4D4D4D" d="M356 0H4C1.8 0 0 1.8 0 4v36h360V4c0-2.2-1.8-4-4-4zM22.991 27a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14z"/></svg>
+                    <img src="img/MaskGroup_1.jpg" width="360" height="580" alt="Шаблон Pink">
                     <div class="template-card">
-                      <a class="template-name" href="">Pink App</a>
+                      <a href="">Pink App</a>
                       <p class="description">Продуктовый лендинг приложения для iOS и Android</p>
                       <button type="button" class="button-buy">9900 ₽</a>
                     </div>
                 </li>
-                <li class="template-item">
-                    <p>
-                      <img src="img/MaskGroup_2.jpg" width="360" height="580" alt="Шаблон Borodinski">
-                    </p>
+                <li class="template-list-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="360" height="40" viewBox="0 0 360 40"><path fill="#4D4D4D" d="M356 0H4C1.8 0 0 1.8 0 4v36h360V4c0-2.2-1.8-4-4-4zM22.991 27a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14z"/></svg>
+                    <img src="img/MaskGroup_2.jpg" width="360" height="580" alt="Шаблон Borodinski">
                     <div class="template-card">
-                      <a class="template-name" href="">Borodinsky</a>
+                      <a href="">Borodinsky</a>
+                      <p class="description">Описание карточки</p>
                       <button type="button" class="button-buy">9900 ₽</a>
                     </div>
                 </li>
-                <li class="template-item">
-                    <p>
-                      <img src="img/MaskGroup_3.jpg" width="360" height="580" alt="Шаблон Mishka">
-                    </p>
+                <li class="template-list-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="360" height="40" viewBox="0 0 360 40"><path fill="#4D4D4D" d="M356 0H4C1.8 0 0 1.8 0 4v36h360V4c0-2.2-1.8-4-4-4zM22.991 27a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14z"/></svg>
+                    <img src="img/MaskGroup_3.jpg" width="360" height="580" alt="Шаблон Mishka">
                     <div class="template-card">
-                      <a class="template-name" href="">Mishka</a>
+                      <a href="">Mishka</a>
+                      <p class="description">Описание карточки</p>
                       <button type="button" class="button-buy">9900 ₽</a>
                     </div>
                 </li>
-                <li class="template-item">
-                    <p>
-                      <img src="img/MaskGroup_4.jpg" width="360" height="580" alt="Шаблон A+">
-                    </p>          
+                <li class="template-list-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="360" height="40" viewBox="0 0 360 40"><path fill="#4D4D4D" d="M356 0H4C1.8 0 0 1.8 0 4v36h360V4c0-2.2-1.8-4-4-4zM22.991 27a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14z"/></svg>
+                    <img src="img/MaskGroup_4.jpg" width="360" height="580" alt="Шаблон A+">         
                     <div class="template-card">
                       <a class="template-name" href="">А+</a>
+                      <p class="description">Описание карточки</p>
                       <button type="button" class="button-buy">9900 ₽</a>
                     </div>
                 </li>
-                <li class="template-item">
-                    <p>
-                      <img src="img/MaskGroup_5.jpg" width="360" height="580" alt=" Шаблон КВАСТ">
-                    </p>
+                <li class="template-list-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="360" height="40" viewBox="0 0 360 40"><path fill="#4D4D4D" d="M356 0H4C1.8 0 0 1.8 0 4v36h360V4c0-2.2-1.8-4-4-4zM22.991 27a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14z"/></svg>
+                    <img src="img/MaskGroup_5.jpg" width="360" height="580" alt=" Шаблон КВАСТ">
                     <div class="template-card">
                       <a class="template-name" href="">Кваст</a>
+                      <p class="description">Описание карточки</p>
                       <button type="button" class="button-buy">9900 ₽</a>
                     </div>
                 </li>
@@ -221,18 +231,18 @@
           <p class="join">Давайте дружить, это выгодно!</p>
           <p class="discount">Скидка 10% для друзей из социальных сетей</p>
           <ul class="social-list">
-            <li class="social-item-vk">
-              <a class="vk-button" href="#" aria-label="Наша страница Вконтакте"><img class="vkicon" src="img/vk-icon.svg" alt="Кнопка Вконтакте">
+            <li>
+              <a class="social-item" href="#" aria-label="Наша страница Вконтакте"><img class="vkicon icon-opacity" src="img/vk-icon.svg" alt="Кнопка Вконтакте">
                 <span class="visually-hidden">Вконтакте</span>
               </a>
             </li>
-            <li class="social-item-fb">
-              <a class="fb-button" href="#" aria-label="Страница в Facebook"><img class="fbicon" src="img/fb-icon.svg" alt="Кнопка Фэйсбук">
+            <li>
+              <a class="social-item" href="#" aria-label="Страница в Facebook"><img class="fbicon icon-opacity" src="img/fb-icon.svg" alt="Кнопка Фэйсбук">
                 <span class="visually-hidden">Фейсбук</span>
               </a>
             </li>
-            <li class="social-item-insta">
-              <a class="insta-button" href="#" aria-label="Страница в Instagram"><img class="instaicon" src="img/insta-icon.svg" alt="Кнопка Инстаграмм">
+            <li>
+              <a class="social-item" href="#" aria-label="Страница в Instagram"><img class="instaicon icon-opacity" src="img/insta-icon.svg" alt="Кнопка Инстаграмм">
                 <span class="visually-hidden">Инстаграм</span>
               </a>
             </li>

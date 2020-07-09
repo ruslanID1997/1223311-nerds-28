@@ -330,7 +330,6 @@ input[type='radio'].visually-hidden {
   width: 300px;
   padding: 0 0 80px;
   margin-right: 100px;
-  text-transform: uppercase;
 }
 
 .overview-item:nth-child(3n) {

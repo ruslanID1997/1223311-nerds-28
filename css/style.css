@@ -143,13 +143,55 @@ input[type='radio'].visually-hidden {
 .cart-navigation:hover,
 .site-navigation a:hover {
   color: var(--special-neutral-red);
+  -webkit-transition: color 0.3s;
+  -o-transition: color 0.3s;
+     transition: color 0.3s;
 }
 
 .cart-navigation:focus,
 .site-navigation a:focus {
   color: var(--basic-black);
   opacity: 0.2;
+  -webkit-transition: color 0.3s;
+  -o-transition: color 0.3s;
+     transition: color 0.3s;
 }
+
+.cart-navigation {
+  position: relative;
+  padding-left: 40px;
+  margin: 5px 0 0 40px;
+  outline: none;
+  max-width: 100px;
+}
+
+.cart-navigation::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 15px;
+  height: 15px;
+  background-image: url('../img/cart-icon.svg');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.cart-navigation:active {
+  opacity: 1;  
+}
+
+.cart-navigation:active span {
+  opacity: 0.3;
+  -webkit-transition: opacity 0.3s;
+       -o-transition: opacity 0.3s;
+          transition: opacity 0.3s;
+}
+
+.cart-navigation:active::before {
+  opacity: 1;
+}
+
 
 .site-navigation-item.active {
   border-bottom: 2px solid var(--special-neutral-red);
@@ -1225,8 +1267,6 @@ input[type='radio'].visually-hidden {
 .window_form {
   display: none;
 }
-
-
 
 
 

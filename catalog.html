@@ -22,7 +22,7 @@
             <li class="site-navigation-item active"><a href="catalog.html">Магазин</a></li>
             <li class="site-navigation-item"><a href="">Контакты</a></li>		
           </ul>
-          <a class="cart-navigation" href="">Корзина</a>
+          <a class="cart-navigation" href=""><span>Корзина</span></a>
         </nav>
       </header>
     <main>
@@ -250,27 +250,30 @@
         <p class="disclaimer">Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>»</p>
       </footer>
   
-      <section class="window_form">
-        <h2 class="visually-hidden">Модальное окно</h2>
-        <form class="request-form" action="https://echo.htmlacademy.ru" method="post">
-          <p>
-            <label class="request-user" for="appointment-name">Ваше имя:</label>
-            <input id="appointment-name" type="text" name="name" placeholder="Имя и Фамилия" tabindex="1" required>
-          </p>
-          <p>
-            <label class="request-mail" for="appointment-email">Ваш email:</label>
-            <input id="appointment-email" type="email" name="email"
-            placeholder="email@example.com" tabindex="2" required>
-          </p>	
-          <p>
-            <label class="request-text" for="text">Текст письма:</label>
-          </p>
-          <p>
-            <textarea name="text" id="text" rows="10" tabindex="3" placeholder="В свободной форме" required></textarea>
-          </p>
-          <button class="button" type="submit">Отправить</button>
-        </form>
-        <button class="button" type="button">Закрыть</button>
-      </section>
+      <div id="write-form" class="modal-window"></div>
+        <section class="window_form">
+          <h2 class="visually-hidden">Модальное окно</h2>
+          <button type="button" class="close-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"><path fill="#FB565A" d="M13.328 10.5l7.371-7.371a1.003 1.003 0 0 0 0-1.414L19.285.3a1.003 1.003 0 0 0-1.414 0L10.5 7.672 3.129.301a1.003 1.003 0 0 0-1.414 0L.301 1.715a1.003 1.003 0 0 0 0 1.414L7.672 10.5.301 17.871a1.003 1.003 0 0 0 0 1.414l1.415 1.414a1.003 1.003 0 0 0 1.414 0l7.371-7.371 7.371 7.371a1.003 1.003 0 0 0 1.414 0l1.414-1.414a1.003 1.003 0 0 0 0-1.414L13.328 10.5z"/></svg>
+            <span class="visually-hidden">Закрыть</span>
+          </button>
+          <form class="request-form" action="https://echo.htmlacademy.ru" method="post">
+            <div class="request-text">
+              <label for="appointment-name">Ваше имя:</label>
+              <input id="appointment-name" type="text" name="name" placeholder="Имя и Фамилия" tabindex="1" required>
+            </div>
+            <div class="contact-form-input">
+              <label for="appointment-email">Ваш email:</label>
+              <input id="appointment-email" type="email" name="email"
+              placeholder="email@example.com" tabindex="2" required>
+            </div>	
+            <div class="contact-form-input textarea">
+              <label for="text">Текст письма:</label>
+              <textarea name="text" id="text" rows="10" tabindex="3" placeholder="В свободной форме" required></textarea>
+            </div>
+            <button class="button" type="submit">Отправить</button>
+          </form>
+        </section>
+      </div>
     </body>
   </html>

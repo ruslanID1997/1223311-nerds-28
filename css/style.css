@@ -10,6 +10,7 @@
     --basic-black: #000000;
     --basic-contact-black: #666666;
     --basic-circle-black: #C1C1C1;
+    --basic-toogle-black: #ABABAB;
 
     --special-neutral-red: #FB565A;
     --special-on-red: #E74246;
@@ -22,6 +23,7 @@
     --special-click-yellow: #E5A722;
     --special-font-green: #01A25E;
     --special-button-black: #231F20;
+    --special-scale-black: #D7DCDF;
 
 
   }
@@ -151,10 +153,6 @@ input[type='radio'].visually-hidden {
 
 .site-navigation-item.active {
   border-bottom: 2px solid var(--special-neutral-red);
-}
-
-.main-page {
-  background-color: var(--basic-white);
 }
 
 .opportunities {
@@ -454,7 +452,7 @@ input[type='radio'].visually-hidden {
 }
 
 .percents-value b {
-  color: black;
+  color: var(--basic-black);
   font-size: 45px;
   line-height: 45px;
   font-weight: bold;
@@ -504,7 +502,7 @@ input[type='radio'].visually-hidden {
   display: block;
   content: '';
   height: 50px;
-  border-right: 2px solid #eeeeee;
+  border-right: 2px solid var(--basic-dark-white);
   position: absolute;
   right: 0;
   top: 50%;
@@ -596,6 +594,12 @@ input[type='radio'].visually-hidden {
   margin-bottom: 36px;
 }
 
+.write-window .button {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+}
+
 .footer-social {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -619,23 +623,35 @@ input[type='radio'].visually-hidden {
 }
 
 .social-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: var(--basic-neutral);
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  outline: none
+  outline: none;
 }
 
 .social-item:hover{
   background-color: var(--special-on-red);
+  -webkit-transition: background-color 0.3s;
+       -o-transition: background-color 0.3s;
+          transition: background-color 0.3s;
 }
 
 .social-item:focus{
   background-color: var(--special-click-red);
   box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+  -webkit-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+     transition: background-color 0.3s;
 }
 
 .social-item:active .icon-opacity {
@@ -699,12 +715,12 @@ input[type='radio'].visually-hidden {
 }
 
 .wrapper {
-    width: 1160px;
+    width: 1180px;
     padding: 0 20px;
     margin: 0 auto;
 }
 
-.wrapper-main {
+.catalog-main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -735,17 +751,17 @@ input[type='radio'].visually-hidden {
 }
 
 .filter legend,
-.sorting h3 {
+.sort h3 {
   color: var(--basic-black);
   font-size: 18px;
   line-height: 30px;
   font-weight: bold;
-  text-transform: uppercase;
   margin: 0;
+  text-transform: uppercase;
 }
 
 .filter-category.price legend,
-.sorting {
+.sort {
   margin-bottom: 50px;
 }
 
@@ -755,10 +771,7 @@ input[type='radio'].visually-hidden {
 }
 
 .filter-category legend {
-  font-weight: bold;
-	font-size: 18px;
-	line-height: 30px;
-	text-transform: uppercase;
+  margin-bottom: 15px;
 }
 
 .filter-category.grid {
@@ -782,7 +795,7 @@ input[type='radio'].visually-hidden {
 
 .range-controls .scale {
 	height: 2px;
-	background: var(--basic-dark-white);
+	background: var(--special-scale-black);
 }
 
 .range-controls .bar {
@@ -799,9 +812,9 @@ input[type='radio'].visually-hidden {
 	height: 4px;
 	padding: 0;
 	border: 8px solid var(--basic-white);
-  background-color: var(--basic-dark-white);
-  -webkit-box-shadow: 0 2px 1px 0 #cfcfcf;
-          box-shadow: 0 2px 1px 0 #cfcfcf;
+  background-color: var(--basic-toogle-black);
+  -webkit-box-shadow: 0px, 2px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px, 2px rgba(0, 0, 0, 0.15);
 	border-radius: 50%;
 	cursor: pointer;
 }
@@ -881,6 +894,11 @@ input[type='radio'].visually-hidden {
   -webkit-transition: opacity 0.3s;
        -o-transition: opacity 0.3s;
           transition: opacity 0.3s;
+}
+
+.grid-radio-control input:disabled ~ span,
+.filter-features-checkbox input:disabled ~ span {
+  opacity: 0.1;
 }
 
 .grid-radio-control input[type='radio'] + .filter-grid-radio {
@@ -1018,20 +1036,6 @@ input[type='radio'].visually-hidden {
 .sort-order-link:active path,
 .sort-order-link.active path {
   fill: rgba(0, 0, 0, 1);
-}
-
-
-.arrow-down {
-	width: 11px;
-	height: 10px;
-	color: var(--special-button-black);
-}
-
-.arrow-up {
-	width: 11px;
-	height: 10px;
-	color: var(--special-button-black);
-	opacity: 0.2;
 }
 
 /* Template */

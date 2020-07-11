@@ -435,7 +435,12 @@ input[type='radio'].visually-hidden {
   padding: 40px 0 75px; 
 }
 
-.exposition .about-us {
+.about-studios {
+  width: 660px;
+  margin-right: auto;
+}
+
+.exposition .about-lozung {
   margin: 35px 0;
   color: var(--basic-black);
   font-size: 45px;
@@ -443,7 +448,7 @@ input[type='radio'].visually-hidden {
   font-weight: 500;
 }
 
-.exposition .about-us-comment {
+.exposition .about-comment {
   margin: 0 0 39px;
 }
 
@@ -459,17 +464,21 @@ input[type='radio'].visually-hidden {
   margin-top: 23px;
 }
 
-.about-make ul {
+.about-make li::before {
+  display: block;
+  content: '';
+  width: 25px;
+  height: 2px;
+  position: absolute;
+  left: 0px;
+  top: 11px;
+  background-color: var(--special-neutral-red);
+}
+
+.about-studios ul {
   padding: 0;
   margin: 0;
   list-style: none;
-}
-
-.red-line::before {
-  padding-right: 12px;
-  content: "\2014";
-  color: var(--special-neutral-red);
-  font-weight: bold;
 }
 
 .statistics-studios {
@@ -477,6 +486,14 @@ input[type='radio'].visually-hidden {
 }
 
 .statistics-studios p {
+  text-align: center;
+}
+
+.statistics-studios > p {
+  margin: 34px 0 38px;
+  line-height: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
   text-align: center;
 }
 
@@ -642,14 +659,6 @@ input[type='radio'].visually-hidden {
   width: 100%;
 }
 
-.footer-social {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding-top: 68px;
-  padding-bottom: 70px;
-}
-
 .social-list{
   display: -webkit-box;
   display: -ms-flexbox;
@@ -747,7 +756,7 @@ input[type='radio'].visually-hidden {
   background-color: var(--basic-dark-white);
 }
 
-.heading h2 {
+.heading h1 {
   margin: 0;
   color: var(--basic-black);
   font-size: 55px;
@@ -1264,12 +1273,15 @@ input[type='radio'].visually-hidden {
   border: 3px solid var(--basic-dark-white); 
 }
 
+.footer-social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 68px;
+  padding-bottom: 70px;
+}
+
 .window_form {
   display: none;
 }
-
-
-
-
-
 

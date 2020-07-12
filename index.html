@@ -46,15 +46,15 @@
 						</li>
 						<li class="advantages-list-item slide-2">
 							<div class="advantages-content">
-								<p class="main-advantages-item">Дорого, долго,<br>скрупулёзно</p>
-								<p class="rede">Математически невыверенный дизайн<br>для чужого сайта или приложения</p>
+								<p class="main-advantages-item">Любим математику<br>как никто другой</p>
+								<p class="rede">Никакого креатива, только математические формулы<br>для расчёта идеальных пропорций</p>
 								<a class="button" href="">Узнать больше</a>		
 							</div>
 						</li>
 						<li class="advantages-list-item slide-3">
 							<div class="advantages-content">
-								<p class="main-advantages-item">Дорого, скрупулёзно, <br>долго</p>
-								<p class="rede">Физически выверенный дизайн<br>для нашего сайта или приложения</p>
+								<p class="main-advantages-item">Только ночь, <br>только хардкор</p>
+								<p class="rede">Работать днем, как все? Мы против этого.<br>Ближе к полуночи работа только начинается.</p>
 								<a class="button" href="">Узнать больше</a>
 							</div>			
 						</li>		
@@ -138,7 +138,7 @@
 						<h3>NERDS DESIGN STUDIO</h3>
 						<p class="address">191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8</p>
 						<p class="phone">тел. <a href="tel:+78122757575">+7 (812) 275-75-75</a></p>
-						<a class="button" href="">НАПИШИТЕ НАМ</a>
+						<a role="button" class="button button-write-window" href="">НАПИШИТЕ НАМ</a>
 					</div>
 				</div>
 						<!-- Здесь будет карта -->
@@ -168,33 +168,33 @@
 					<p class="discount">Скидка 10% для друзей из социальных сетей</p>
 				</div>
 			</div>
+			<div class="model-map">
+				<!-- Здесь будет карта -->
+			</div>
 			<p class="disclaimer">Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>»</p>
 		</footer>
-
-		<div id="write-form" class="modal-window"></div>
-			<section class="window_form">
-				<h2 class="visually-hidden">Модальное окно</h2>
-				<button type="button" class="close-button">
-					<svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"><path fill="#FB565A" d="M13.328 10.5l7.371-7.371a1.003 1.003 0 0 0 0-1.414L19.285.3a1.003 1.003 0 0 0-1.414 0L10.5 7.672 3.129.301a1.003 1.003 0 0 0-1.414 0L.301 1.715a1.003 1.003 0 0 0 0 1.414L7.672 10.5.301 17.871a1.003 1.003 0 0 0 0 1.414l1.415 1.414a1.003 1.003 0 0 0 1.414 0l7.371-7.371 7.371 7.371a1.003 1.003 0 0 0 1.414 0l1.414-1.414a1.003 1.003 0 0 0 0-1.414L13.328 10.5z"/></svg>
-					<span class="visually-hidden">Закрыть</span>
-				</button>
-				<form class="request-form" action="https://echo.htmlacademy.ru" method="post">
-					<div class="request-text">
-						<label for="appointment-name">Ваше имя:</label>
-						<input id="appointment-name" type="text" name="name" placeholder="Имя и Фамилия" tabindex="1" required>
-					</div>
-					<div class="contact-form-input">
-						<label for="appointment-email">Ваш email:</label>
-						<input id="appointment-email" type="email" name="email"
-						placeholder="email@example.com" tabindex="2" required>
-					</div>	
-					<div class="contact-form-input textarea">
-						<label for="text">Текст письма:</label>
-						<textarea name="text" id="text" rows="10" tabindex="3" placeholder="В свободной форме" required></textarea>
-					</div>
-					<button class="button" type="submit">Отправить</button>
-				</form>
-			</section>
+		<div id="request-form" class="modal-window">
+			<h3>Напишите нам</h3>
+			<button type="button" class="button-close">
+				<svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"><path fill="#FB565A" d="M13.328 10.5l7.371-7.371a1.003 1.003 0 0 0 0-1.414L19.285.3a1.003 1.003 0 0 0-1.414 0L10.5 7.672 3.129.301a1.003 1.003 0 0 0-1.414 0L.301 1.715a1.003 1.003 0 0 0 0 1.414L7.672 10.5.301 17.871a1.003 1.003 0 0 0 0 1.414l1.415 1.414a1.003 1.003 0 0 0 1.414 0l7.371-7.371 7.371 7.371a1.003 1.003 0 0 0 1.414 0l1.414-1.414a1.003 1.003 0 0 0 0-1.414L13.328 10.5z"/></svg>
+				<span class="visually-hidden">Закрыть</span>
+			</button>
+			<form class="request-text" action="https://echo.htmlacademy.ru" method="post">
+				<div class="request-text-input">
+					<label for="request-text-name">Ваше имя:</label>
+					<input id="request-text-name" type="text" name="name" placeholder="Имя и Фамилия" tabindex="1" required>
+				</div>
+				<div class="request-text-input">
+					<label for="request-text-email">Ваш email:</label>
+					<input id="request-text-email" type="email" name="email"
+					placeholder="email@example.com" tabindex="2" required>
+				</div>	
+				<div class="request-text-input textarea">
+					<label for="request-text-message">Текст письма:</label>
+					<textarea name="text" id="request-text-message" rows="10" tabindex="3" placeholder="В свободной форме" required></textarea>
+				</div>
+				<button class="button" type="submit">Отправить</button>
+			</form>
 		</div>
   </body>
 </html>

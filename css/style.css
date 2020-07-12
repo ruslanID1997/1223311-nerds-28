@@ -25,6 +25,8 @@
   --special-scale-black: #D7DCDF;
   --special-form-grey: #D7DCDE;
   --special-form-click: #B4B9BB;
+  --rgba-click-black: rgba(0, 0, 0, 0.3);
+  --box-shadow-black: rgba(0, 1, 1, 0.1);
 }
 
 body {
@@ -101,8 +103,7 @@ input[type='radio'].visually-hidden {
   height: 65px;
 }
 
-.main-header-logo:active {
-  color: var(--basic-black);
+.main-header-logo:focus {
   opacity: 0.3;
 }
 
@@ -149,7 +150,7 @@ input[type='radio'].visually-hidden {
 .cart-navigation:focus,
 .site-navigation a:focus {
   color: var(--basic-black);
-  opacity: 0.2;
+  opacity: 0.3;
   -webkit-transition: color 0.3s;
   -o-transition: color 0.3s;
   transition: color 0.3s;
@@ -325,29 +326,33 @@ input[type='radio'].visually-hidden {
 .button:hover {
   color: var(--basic-white);
   background-color: var(--special-on-red);
+  outline: none;
+  -webkit-transition: background-color 0.3s;
+       -o-transition: background-color 0.3s;
+          transition: background-color 0.3s;
 }
 
 .button:focus {
-  color: rgba(255, 255, 255,.7);
-  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+  color: rgba(255, 255, 255, 0.7);
+  box-shadow: inset 0px 3px 0px var(--box-shadow-black);
   background-color: var(--special-click-red);
   outline: none;
   -webkit-transition: background-color 0.3s;
-  -o-transition: background-color 0.3s;
-  transition: background-color 0.3s;
+       -o-transition: background-color 0.3s;
+          transition: background-color 0.3s;
 }
 
 .button:active {
   background-color: var(--special-click-red);
   color: rgba(255, 255, 255, 0.3);
-  -webkit-box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
-  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+  -webkit-box-shadow: inset 0px 3px 0px var(--box-shadow-black);
+  box-shadow: inset 0px 3px 0px var(--box-shadow-black);
   outline: none;
   -webkit-transition: background-color 0.3s, color 0.3s, -webkit-box-shadow 0.3s;
-  transition: background-color 0.3s, color 0.3s, -webkit-box-shadow 0.3s;
-  -o-transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
-  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
-  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, -webkit-box-shadow 0.3s;
+          transition: background-color 0.3s, color 0.3s, -webkit-box-shadow 0.3s;
+       -o-transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+          transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+          transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, -webkit-box-shadow 0.3s;
 }
 
 .overview-list {
@@ -359,7 +364,7 @@ input[type='radio'].visually-hidden {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   list-style: none;
-  border-bottom: 2px solid #eeeeee;
+  border-bottom: 2px solid var(--basic-dark-white);
 }
 
 .overview-item {
@@ -396,8 +401,8 @@ input[type='radio'].visually-hidden {
 .button-green:active {
   color: rgba(255,255,255,0.3);
   background-color: var(--special-click-green);
-  -webkit-box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
-  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1)8;
+  -webkit-box-shadow: inset 0px 3px 0px var(--box-shadow-black);
+  box-shadow: inset 0px 3px 0px var(--box-shadow-black);
 }
 
 .button.button-yellow {
@@ -411,8 +416,8 @@ input[type='radio'].visually-hidden {
 
 .button.button-yellow:active {
   background-color: var(--special-click-yellow);
-  -webkit-box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
-  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+  -webkit-box-shadow: inset 0px 3px 0px var(--box-shadow-black);
+  box-shadow: inset 0px 3px 0px var(--box-shadow-black);
 }
 
 .about-lozung {
@@ -875,7 +880,7 @@ input[type='radio'].visually-hidden {
 
 .social-item:focus {
   background-color: var(--special-click-red);
-  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+  box-shadow: inset 0px 3px 0px var(--box-shadow-black);
   -webkit-transition: background-color 0.3s;
   -o-transition: background-color 0.3s;
   transition: background-color 0.3s;
@@ -1252,17 +1257,20 @@ input[type='radio'].visually-hidden {
 }
 
 .sort-order-link path {
-  fill: rgba(0, 0, 0, 0.3);
+  fill: var(--rgba-click-black);
 }
 
-.sort-order-link:hover path,
-.sort-order-link:focus path {
-  fill: rgba(0, 0, 0, 0.6);
+.sort-order-link:hover path {
+  fill: var(--basic-light-grey);
 }
 
-.sort-order-link:active path,
+.sort-order-link:focus path,
+.sort-order-link:active path {
+  fill: var(--basic-black);
+}
+
 .sort-order-link.active path {
-  fill: rgba(0, 0, 0, 1);
+  fill: var(--basic-black);
 }
 
 /* Template */
@@ -1336,12 +1344,27 @@ input[type='radio'].visually-hidden {
   text-align: center;
 }
 
-.template-card .template-title {
+.template-title {
   color: var(--basic-black);
   font-size: 18px;
   line-height: 30px;
   font-weight: bold;
   text-transform: uppercase;
+}
+
+.template-title:hover {
+  color: var(--special-neutral-red);
+  -webkit-transition: color 0.3s;
+       -o-transition: color 0.3s;
+          transition: color 0.3s;
+}
+
+.template-title:focus {
+  color: var(--basic-black);
+  opacity: 0.2;
+  -webkit-transition: color 0.3s;
+       -o-transition: color 0.3s;
+          transition: color 0.3s;
 }
 
 .description {
@@ -1368,49 +1391,33 @@ input[type='radio'].visually-hidden {
 .button-buy:hover {
   color: var(--basic-white);
   background-color: var(--special-on-red);
+  outline: none;
+  -webkit-transition: background-color 0.3s;
+       -o-transition: background-color 0.3s;
+          transition: background-color 0.3s;
 }
 
 .button-buy:focus {
   color: rgba(255, 255, 255,.7);
-  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+  box-shadow: inset 0px 3px 0px var(--box-shadow-black);
   background-color: var(--special-click-red);
   outline: none;
   -webkit-transition: background-color 0.3s;
-  -o-transition: background-color 0.3s;
-  transition: background-color 0.3s;
+       -o-transition: background-color 0.3s;
+          transition: background-color 0.3s;
 }
 
 .button-buy:active {
   background-color: var(--special-click-red);
   color: rgba(255, 255, 255, 0.3);
-  -webkit-box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
-  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+  -webkit-box-shadow: inset 0px 3px 0px var(--box-shadow-black);
+  box-shadow: inset 0px 3px 0px var(--box-shadow-black);
   outline: none;
   -webkit-transition: background-color 0.3s, color 0.3s, -webkit-box-shadow 0.3s;
-  transition: background-color 0.3s, color 0.3s, -webkit-box-shadow 0.3s;
-  -o-transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
-  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
-  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, -webkit-box-shadow 0.3s;
-}
-
-.button.btn-page {
-  background-color: var(--basic-dark-white);
-  border: 3px solid var(--basic-dark-white);
-  color: var(--basic-black);
-}
-
-.button.btn-page:hover {
-  background-color: var(--basic-on-grey);
-  border: 3px solid var(--basic-on-grey);
-}
-
-.button.btn-page:focus {
-  background-color: var(--basic-click-grey);
-  border: 3px solid var(--basic-click-grey);
-}
-
-.button.btn-page:active {
-  background-color: var(--basic-click-grey);
+          transition: background-color 0.3s, color 0.3s, -webkit-box-shadow 0.3s;
+       -o-transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+          transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+          transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, -webkit-box-shadow 0.3s;
 }
 
 /* Pagination */
@@ -1430,9 +1437,9 @@ input[type='radio'].visually-hidden {
   margin-right: 10px;
 }
 
-.pagination-item .button {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+.button.btn-page {
+  background-color: var(--basic-dark-white);
+  color: var(--basic-black);
   padding: 0;
   min-width: 50px;
   min-height: 50px;
@@ -1440,18 +1447,39 @@ input[type='radio'].visually-hidden {
   line-height: 50px;
 }
 
-.pagination-item .btn-page.active {
-  background-color: var(--basic-white);
-  border: 3px solid var(--basic-dark-white);
-  line-height: 50px;
-  -webkit-box-shadow: none;
-  box-shadow: none;
+.button.btn-page:hover {
+  background-color: var(--basic-on-grey);
 }
 
-.pagination-item .btn-next {
+.button.btn-page:focus {
+  color: var(--rgba-click-black);
+  box-shadow: inset 0px 3px 0px var(--box-shadow-black);
+  background-color: var(--basic-click-grey);
+  outline: none;
+  -webkit-transition: background-color 0.3s;
+       -o-transition: background-color 0.3s;
+          transition: background-color 0.3s;
+  -webkit-transition: color 0.3s;
+       -o-transition: color 0.3s;
+          transition: color 0.3s;
+}
+
+.button.btn-page.active {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: var(--basic-black);
+  background-color: rgba(0, 0, 0, 0.0001);
+  border: 3px solid var(--basic-dark-white);
+  width: 3px;
+  line-height: 44px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  cursor: default;
+}
+
+.button.btn-next {
   padding-left: 80px;
   padding-right: 80px;
-  border: 3px solid var(--basic-dark-white);
 }
 
 .footer-social {

@@ -5,273 +5,272 @@
     <title>Каталог — HTML Academy: «Нёрдс»</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
 
   <body class="page-body">
-      <p class="visually-hidden">Дизайн-студия Нёрдс</p>
-      <header class="site-header">
-        <nav class="wrapper">
-          <a href="index.html" class="main-header-logo">
-            <img src="img/nerds-logo.svg" width="160" height="65" alt="Магазин Нёрдс">
-          </a>
-          <ul class="site-navigation">
-            <li class="site-navigation-item"><a href="">Студия</a></li>
-            <li class="site-navigation-item"><a href="">Клиенты</a></li>
-            <li class="site-navigation-item active"><a href="catalog.html">Магазин</a></li>
-            <li class="site-navigation-item"><a href="">Контакты</a></li>		
-            <!-- При переполнении уменьшается логотип -->
-          </ul>
-          <a class="cart-navigation" href=""><span>Корзина</span></a>
-        </nav>
-      </header>
-    <main>
-      <div class="heading">
-        <div class="wrapper">
-            <h1>Магазин готовых шаблонов</h1>
-        </div>
-      </div>
-      <div class="wrapper catalog-main">
-        <section class="filter">
-          <h2 class="visually-hidden">Фильтр товаров:</h2>
-          <form action="https://echo.htmlacademy.ru" method="post">
-            <fieldset class="filter-category price">
-              <legend>Стоимость:</legend>
-                       <div class="range-filter">
-                        <div class="range-controls">
-                            <div class="scale">
-                                <div class="bar">
-                                </div>
-                            </div>
-                          <div class="toggle toggle-min" tabindex="0"></div>
-                          <div class="toggle toggle-max" tabindex="0"></div>
-                        </div>
-                          <div class="price-controls">
-                            <label class="min-price">От <input name="minprice" type="text" value="0"></label>
-                            <label class="max-price">До <input name="maxprice" type="text" value="15000"></label>
-                        </div>
-                        </div>
-            </fieldset>
-            <fieldset class="filter-category grid">
-              <legend>Сетка:</legend>
-                <label class="grid-radio-control">
-                  <input class="visually-hidden" type="radio" name="grid-group" value="adaptive" checked>
-                  <span class="filter-grid-radio"></span>
-                  <span>Адаптивная</span>
-                </label>
-                <label class="grid-radio-control">
-                  <input class="visually-hidden" type="radio" name="grid-group" value="fix">
-                  <span class="filter-grid-radio"></span>
-                  <span>Фиксированная</span>
-                </label>
-                <label class="grid-radio-control">
-                  <input class="visually-hidden" type="radio" name="grid-group" value="rubber">
-                  <span class="filter-grid-radio"></span>
-                  <span>Резиновая</span>
-                </label>
-            </fieldset>
-            <fieldset class="filter-category features">
-                <legend>Особенности:</legend>
-                <label class="filter-features-checkbox">
-                  <input class="visually-hidden" type="checkbox" name="features-group" value="slide" checked>
-                  <span class="checkbox-indicator"></span>
-                  <span>Слайдер</span>
-                </label>
-                <label class="filter-features-checkbox">
-                  <input class="visually-hidden" type="checkbox" name="benefits-group" value="benefits">
-                  <span class="checkbox-indicator"></span>
-                  <span>Блок преимуществ</span>
-                </label>
-                <label class="filter-features-checkbox">
-                  <input class="visually-hidden" type="checkbox" name="news-group" value="news" checked>
-                  <span class="checkbox-indicator"></span>
-                  <span>Новости</span>
-                </label>
-                <label class="filter-features-checkbox">
-                  <input class="visually-hidden" type="checkbox" name="gallery-group" value="gallery">
-                  <span class="checkbox-indicator"></span>
-                  <span>Галерея</span>
-                </label>
-                <label class="filter-features-checkbox">
-                  <input class="visually-hidden" type="checkbox" name="cart-group" value="cart">
-                  <span class="checkbox-indicator"></span>
-                  <span>Корзина</span>
-                </label>
-            </fieldset>
-            <button type="submit" class="button btn-show-gray">Показать</button>
-          </form>
-        </section>
-        <div class="sort-templates">
-          <section class="sort">
-            <h3>Сортировать:</h3>
-            <ul class="sort-types">
-              <li>
-                <a href="#" class="active">По цене</a>
-              </li>
-              <li>
-                <a href="#">По типу</a>
-              </li>
-              <li>
-                <a href="#">По названию</a>
-              </li>
-            </ul>
-            <ul class="sort-order">
-              <li class="sort-order-down active">
-                <a href="#" class="sort-order-link active">
-                  <span class="visually-hidden">По убыванию</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path fill="#231F20" d="M5.5 10L0 0h11"/></svg>
-                </a>
-              </li>
-              <li class="sort-order-up">
-              <a href="#" class="sort-order-link">
-                <span class="visually-hidden">По возрастанию</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path fill="#231F20" d="M5.5 0L0 10h11z"/></svg>
+        <p class="visually-hidden">Дизайн-студия Нёрдс</p>
+        <header class="site-header">
+            <nav class="wrapper">
+              <a href="index.html" class="main-header-logo">
+                <img src="img/nerds-logo.svg" width="160" height="65" alt="Магазин Нёрдс">
               </a>
-              </li>
-            </ul>
-          </section>
-
-          <section class="templates">
-            <h2 class="visually-hidden">Страницы продуктов</h2>
-            <ul class="template-list">
-                <li class="template-list-item" tabindex="0">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="360" height="40" viewBox="0 0 360 40"><path fill="#4D4D4D" d="M356 0H4C1.8 0 0 1.8 0 4v36h360V4c0-2.2-1.8-4-4-4zM22.991 27a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14z"/></svg>
-                    <img class=template-list-image src="img/MaskGroup.jpg" width="360" height="580" alt="Шаблон Sedona">
-                    <div class="template-card">
-                      <a class="template-title" href="#">Sedona</a>
-                      <p class="description">Информационный сайт<br>для туристов</p>
-                      <a class="button-buy" href="">9900 ₽</a>
-                    </div>
-                </li>
-                <li class="template-list-item" tabindex="0">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="360" height="40" viewBox="0 0 360 40"><path fill="#4D4D4D" d="M356 0H4C1.8 0 0 1.8 0 4v36h360V4c0-2.2-1.8-4-4-4zM22.991 27a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14z"/></svg>
-                    <img class=template-list-image src="img/MaskGroup-1.jpg" width="360" height="580" alt="Шаблон Pink">
-                    <div class="template-card">
-                      <a class="template-title" href="#">Pink App</a>
-                      <p class="description">Продуктовый лендинг<br>приложения для iOS и Android</p>
-                      <a class="button-buy" href="">9900 ₽</a>
-                    </div>
-                </li>
-                <li class="template-list-item" tabindex="0">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="360" height="40" viewBox="0 0 360 40"><path fill="#4D4D4D" d="M356 0H4C1.8 0 0 1.8 0 4v36h360V4c0-2.2-1.8-4-4-4zM22.991 27a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14z"/></svg>
-                    <img class=template-list-image src="img/MaskGroup-2.jpg" width="360" height="580" alt="Шаблон Borodinski">
-                    <div class="template-card">
-                      <a class="template-title" href="#">Barbershop</a>
-                      <p class="description">Сайт салона красоты.<br>Для мужчин, да.</p>
-                      <a class="button-buy" href="">9900 ₽</a>
-                    </div>
-                </li>
-                <li class="template-list-item" tabindex="0">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="360" height="40" viewBox="0 0 360 40"><path fill="#4D4D4D" d="M356 0H4C1.8 0 0 1.8 0 4v36h360V4c0-2.2-1.8-4-4-4zM22.991 27a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14z"/></svg>
-                    <img class=template-list-image src="img/MaskGroup-3.jpg" width="360" height="580" alt="Шаблон Mishka">
-                    <div class="template-card">
-                      <a class="template-title" href="#">Mishka</a>
-                      <p class="description">Интернет-магазин<br>вязаных игрушек</p>
-                      <a class="button-buy" href="">9900 ₽</a>
-                    </div>
-                </li>
-                <li class="template-list-item" tabindex="0">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="360" height="40" viewBox="0 0 360 40"><path fill="#4D4D4D" d="M356 0H4C1.8 0 0 1.8 0 4v36h360V4c0-2.2-1.8-4-4-4zM22.991 27a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14z"/></svg>
-                    <img class=template-list-image src="img/MaskGroup-4.jpg" width="360" height="580" alt="Шаблон A+">         
-                    <div class="template-card">
-                      <a class="template-title" href="#">A PLUS</a>
-                      <p class="description">Лендинг курсов повышения<br>квалификации</p>
-                      <a class="button-buy" href="">9900 ₽</a>
-                    </div>
-                </li>
-                <li class="template-list-item" tabindex="0">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="360" height="40" viewBox="0 0 360 40"><path fill="#4D4D4D" d="M356 0H4C1.8 0 0 1.8 0 4v36h360V4c0-2.2-1.8-4-4-4zM22.991 27a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14z"/></svg>
-                    <img class=template-list-image src="img/MaskGroup-5.jpg" width="360" height="580" alt=" Шаблон КВАСТ">
-                    <div class="template-card">
-                      <a class="template-title" href="#">Кваст</a>
-                      <p class="description">Промо-сайт производителя<br>крафтового кваса</p>
-                      <a class="button-buy" href="">9900 ₽</a>
-                    </div>
-                </li>
-            </ul>
-            <ul class="page-numbers">
-                <li class="pagination-item">
-                  <a href="#" class="button btn-page active">1</a>
-                </li>
-                <li class="pagination-item">
-                  <a href="#" class="button btn-page">2</a>
-                </li>
-                <li class="pagination-item">
-                  <a href="#" class="button btn-page">3</a>
-                </li>
-                <li class="pagination-item">
-                  <a href="#" class="button btn-page btn-next">Следующая</a>
-                </li>
-                <!-- При переполнении пагинации отступа снизу кнопки нет -->
-            </ul>
-          </section>
-        </div>
-      </div>
-
-			<section class="contacts">
-        <h2 class="visually-hidden">Контакты</h2>
-          <div class="wrapper contacts-write">
-            <div class="write-window">
-              <h3>NERDS DESIGN STUDIO</h3>
-              <p class="address">191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8</p>
-              <p class="phone">тел. <a href="tel:+78122757575">+7 (812) 275-75-75</a></p>
-              <a role="button" class="button button-write-window" href="">НАПИШИТЕ НАМ</a>
+              <ul class="site-navigation">
+                <li class="site-navigation-item"><a href="">Студия</a></li>
+                <li class="site-navigation-item"><a href="">Клиенты</a></li>
+                <li class="site-navigation-item active"><a href="catalog.html">Магазин</a></li>
+                <li class="site-navigation-item"><a href="">Контакты</a></li>		
+              </ul>
+              <a class="cart-navigation" href=""><span>Корзина</span></a>
+            </nav>
+        </header>
+        <main>
+          <div class="heading">
+            <div class="wrapper">
+                <h1>Магазин готовых шаблонов</h1>
             </div>
           </div>
-              <!-- Здесь будет карта -->
-        </section>
-    </main>
-    <footer>
-        <div class="wrapper footer-social">
-          <ul class="social-list">
-              <li>
-                <a class="social-item" href="#" aria-label="Наша страница Вконтакте"><img class="vkicon icon-opacity" src="img/vk-icon.svg" alt="Кнопка Вконтакте">
-                  <span class="visually-hidden">Вконтакте</span>
-                </a>
-              </li>
-              <li>
-                <a class="social-item" href="#" aria-label="Страница в Facebook"><img class="fbicon icon-opacity" src="img/fb-icon.svg" alt="Кнопка Фэйсбук">
-                  <span class="visually-hidden">Фейсбук</span>
-                </a>
-              </li>
-              <li>
-                <a class="social-item" href="#" aria-label="Страница в Instagram"><img class="instaicon icon-opacity" src="img/insta-icon.svg" alt="Кнопка Инстаграмм">
-                  <span class="visually-hidden">Инстаграм</span>
-                </a>
-              </li>
-          </ul>
-          <div class="be-friends">
-            <p class="join">Давайте дружить, это выгодно!</p>
-            <p class="discount">Скидка 10% для друзей из социальных сетей</p>
+          <div class="wrapper catalog-main">
+            <section class="filter">
+              <h2 class="visually-hidden">Фильтр товаров:</h2>
+              <form action="https://echo.htmlacademy.ru" method="post">
+                <fieldset class="filter-category price">
+                  <legend>Стоимость:</legend>
+                          <div class="range-filter">
+                            <div class="range-controls">
+                                <div class="scale">
+                                    <div class="bar">
+                                    </div>
+                                </div>
+                              <div class="toggle toggle-min" tabindex="0"></div>
+                              <div class="toggle toggle-max" tabindex="0"></div>
+                            </div>
+                              <div class="price-controls">
+                                <label class="min-price">От <input name="minprice" type="text" value="0"></label>
+                                <label class="max-price">До <input name="maxprice" type="text" value="15000"></label>
+                            </div>
+                            </div>
+                </fieldset>
+                <fieldset class="filter-category grid">
+                  <legend>Сетка:</legend>
+                    <label class="grid-radio-control">
+                      <input class="visually-hidden" type="radio" name="grid-group" value="adaptive" checked>
+                      <span class="filter-grid-radio"></span>
+                      <span>Адаптивная</span>
+                    </label>
+                    <label class="grid-radio-control">
+                      <input class="visually-hidden" type="radio" name="grid-group" value="fix">
+                      <span class="filter-grid-radio"></span>
+                      <span>Фиксированная</span>
+                    </label>
+                    <label class="grid-radio-control">
+                      <input class="visually-hidden" type="radio" name="grid-group" value="rubber">
+                      <span class="filter-grid-radio"></span>
+                      <span>Резиновая</span>
+                    </label>
+                </fieldset>
+                <fieldset class="filter-category features">
+                    <legend>Особенности:</legend>
+                    <label class="filter-features-checkbox">
+                      <input class="visually-hidden" type="checkbox" name="features-group" value="slide" checked>
+                      <span class="checkbox-indicator"></span>
+                      <span>Слайдер</span>
+                    </label>
+                    <label class="filter-features-checkbox">
+                      <input class="visually-hidden" type="checkbox" name="benefits-group" value="benefits">
+                      <span class="checkbox-indicator"></span>
+                      <span>Блок преимуществ</span>
+                    </label>
+                    <label class="filter-features-checkbox">
+                      <input class="visually-hidden" type="checkbox" name="news-group" value="news" checked>
+                      <span class="checkbox-indicator"></span>
+                      <span>Новости</span>
+                    </label>
+                    <label class="filter-features-checkbox">
+                      <input class="visually-hidden" type="checkbox" name="gallery-group" value="gallery">
+                      <span class="checkbox-indicator"></span>
+                      <span>Галерея</span>
+                    </label>
+                    <label class="filter-features-checkbox">
+                      <input class="visually-hidden" type="checkbox" name="cart-group" value="cart">
+                      <span class="checkbox-indicator"></span>
+                      <span>Корзина</span>
+                    </label>
+                </fieldset>
+                <button type="submit" class="button btn-show-gray">Показать</button>
+              </form>
+            </section>
+            <div class="sort-templates">
+              <section class="sort">
+                <h3>Сортировать:</h3>
+                <ul class="sort-types">
+                  <li>
+                    <a href="#" class="active">По цене</a>
+                  </li>
+                  <li>
+                    <a href="#">По типу</a>
+                  </li>
+                  <li>
+                    <a href="#">По названию</a>
+                  </li>
+                </ul>
+                <ul class="sort-order">
+                  <li class="sort-order-down active">
+                    <a href="#" class="sort-order-link active">
+                      <span class="visually-hidden">По убыванию</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path fill="#231F20" d="M5.5 10L0 0h11"/></svg>
+                    </a>
+                  </li>
+                  <li class="sort-order-up">
+                  <a href="#" class="sort-order-link">
+                    <span class="visually-hidden">По возрастанию</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path fill="#231F20" d="M5.5 0L0 10h11z"/></svg>
+                  </a>
+                  </li>
+                </ul>
+              </section>
+
+              <section>
+                <h2 class="visually-hidden">Страницы продуктов</h2>
+                <ul class="template-list">
+                    <li class="template-list-item" tabindex="0">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="360" height="40" viewBox="0 0 360 40"><path fill="#4D4D4D" d="M356 0H4C1.8 0 0 1.8 0 4v36h360V4c0-2.2-1.8-4-4-4zM22.991 27a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14z"/></svg>
+                        <img class=template-list-image src="img/MaskGroup.jpg" width="360" height="580" alt="Шаблон Sedona">
+                        <div class="template-card">
+                          <a class="template-title" href="#">Sedona</a>
+                          <p class="description">Информационный сайт<br>для туристов</p>
+                          <a class="button-buy" href="">9900 ₽</a>
+                        </div>
+                    </li>
+                    <li class="template-list-item" tabindex="0">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="360" height="40" viewBox="0 0 360 40"><path fill="#4D4D4D" d="M356 0H4C1.8 0 0 1.8 0 4v36h360V4c0-2.2-1.8-4-4-4zM22.991 27a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14z"/></svg>
+                        <img class=template-list-image src="img/MaskGroup-1.jpg" width="360" height="580" alt="Шаблон Pink">
+                        <div class="template-card">
+                          <a class="template-title" href="#">Pink App</a>
+                          <p class="description">Продуктовый лендинг<br>приложения для iOS и Android</p>
+                          <a class="button-buy" href="">9900 ₽</a>
+                        </div>
+                    </li>
+                    <li class="template-list-item" tabindex="0">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="360" height="40" viewBox="0 0 360 40"><path fill="#4D4D4D" d="M356 0H4C1.8 0 0 1.8 0 4v36h360V4c0-2.2-1.8-4-4-4zM22.991 27a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14z"/></svg>
+                        <img class=template-list-image src="img/MaskGroup-2.jpg" width="360" height="580" alt="Шаблон Borodinski">
+                        <div class="template-card">
+                          <a class="template-title" href="#">Barbershop</a>
+                          <p class="description">Сайт салона красоты.<br>Для мужчин, да.</p>
+                          <a class="button-buy" href="">9900 ₽</a>
+                        </div>
+                    </li>
+                    <li class="template-list-item" tabindex="0">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="360" height="40" viewBox="0 0 360 40"><path fill="#4D4D4D" d="M356 0H4C1.8 0 0 1.8 0 4v36h360V4c0-2.2-1.8-4-4-4zM22.991 27a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14z"/></svg>
+                        <img class=template-list-image src="img/MaskGroup-3.jpg" width="360" height="580" alt="Шаблон Mishka">
+                        <div class="template-card">
+                          <a class="template-title" href="#">Mishka</a>
+                          <p class="description">Интернет-магазин<br>вязаных игрушек</p>
+                          <a class="button-buy" href="">9900 ₽</a>
+                        </div>
+                    </li>
+                    <li class="template-list-item" tabindex="0">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="360" height="40" viewBox="0 0 360 40"><path fill="#4D4D4D" d="M356 0H4C1.8 0 0 1.8 0 4v36h360V4c0-2.2-1.8-4-4-4zM22.991 27a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14z"/></svg>
+                        <img class=template-list-image src="img/MaskGroup-4.jpg" width="360" height="580" alt="Шаблон A+">         
+                        <div class="template-card">
+                          <a class="template-title" href="#">A PLUS</a>
+                          <p class="description">Лендинг курсов повышения<br>квалификации</p>
+                          <a class="button-buy" href="">9900 ₽</a>
+                        </div>
+                    </li>
+                    <li class="template-list-item" tabindex="0">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="360" height="40" viewBox="0 0 360 40"><path fill="#4D4D4D" d="M356 0H4C1.8 0 0 1.8 0 4v36h360V4c0-2.2-1.8-4-4-4zM22.991 27a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14z"/></svg>
+                        <img class=template-list-image src="img/MaskGroup-5.jpg" width="360" height="580" alt=" Шаблон КВАСТ">
+                        <div class="template-card">
+                          <a class="template-title" href="#">Кваст</a>
+                          <p class="description">Промо-сайт производителя<br>крафтового кваса</p>
+                          <a class="button-buy" href="">9900 ₽</a>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="page-numbers">
+                    <li class="pagination-item">
+                      <a href="#" class="button btn-page active">1</a>
+                    </li>
+                    <li class="pagination-item">
+                      <a href="#" class="button btn-page">2</a>
+                    </li>
+                    <li class="pagination-item">
+                      <a href="#" class="button btn-page">3</a>
+                    </li>
+                    <li class="pagination-item">
+                      <a href="#" class="button btn-page btn-next">Следующая</a>
+                    </li>
+                </ul>
+              </section>
+            </div>
           </div>
+
+          <section class="contacts">
+            <h2 class="visually-hidden">Контакты</h2>
+              <div class="wrapper contacts-write">
+                <div class="write-window">
+                  <h3>NERDS DESIGN STUDIO</h3>
+                  <p class="address">191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8</p>
+                  <p class="phone">тел. <a href="tel:+78122757575">+7 (812) 275-75-75</a></p>
+                  <a role="button" class="button button-write-window" href="">НАПИШИТЕ НАМ</a>
+                </div>
+              </div>
+              <div class="model-map">
+                <!-- Здесь будет карта -->
+              </div>
+            </section>
+        </main>
+        <footer>
+            <div class="wrapper footer-social">
+              <ul class="social-list">
+                  <li>
+                    <a class="social-item" href="#" aria-label="Наша страница Вконтакте"><img class="vkicon icon-opacity" src="img/vk-icon.svg" alt="Кнопка Вконтакте">
+                      <span class="visually-hidden">Вконтакте</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="social-item" href="#" aria-label="Страница в Facebook"><img class="fbicon icon-opacity" src="img/fb-icon.svg" alt="Кнопка Фэйсбук">
+                      <span class="visually-hidden">Фейсбук</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="social-item" href="#" aria-label="Страница в Instagram"><img class="instaicon icon-opacity" src="img/insta-icon.svg" alt="Кнопка Инстаграмм">
+                      <span class="visually-hidden">Инстаграм</span>
+                    </a>
+                  </li>
+              </ul>
+              <div class="be-friends">
+                <p class="join">Давайте дружить, это выгодно!</p>
+                <p class="discount">Скидка 10% для друзей из социальных сетей.</p>
+              </div>
+            </div>
+        </footer>
+
+        <div id="request-form" class="modal-window">
+          <h3>Напишите нам</h3>
+          <button type="button" class="button-close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"><path fill="#FB565A" d="M13.328 10.5l7.371-7.371a1.003 1.003 0 0 0 0-1.414L19.285.3a1.003 1.003 0 0 0-1.414 0L10.5 7.672 3.129.301a1.003 1.003 0 0 0-1.414 0L.301 1.715a1.003 1.003 0 0 0 0 1.414L7.672 10.5.301 17.871a1.003 1.003 0 0 0 0 1.414l1.415 1.414a1.003 1.003 0 0 0 1.414 0l7.371-7.371 7.371 7.371a1.003 1.003 0 0 0 1.414 0l1.414-1.414a1.003 1.003 0 0 0 0-1.414L13.328 10.5z"/></svg>
+            <span class="visually-hidden">Закрыть</span>
+          </button>
+          <form class="request-text" action="https://echo.htmlacademy.ru" method="post">
+            <div class="request-text-input">
+              <label for="request-text-name">Ваше имя:</label>
+              <input id="request-text-name" type="text" name="name" placeholder="Имя Фамилия" tabindex="1">
+            </div>
+            <div class="request-text-input">
+              <label for="request-text-email">Ваш email:</label>
+              <input id="request-text-email" type="email" name="email"
+              placeholder="email@example.com" tabindex="2">
+            </div>	
+            <div class="request-text-input textarea">
+              <label for="request-text-message">Текст письма:</label>
+              <textarea name="text" id="request-text-message" rows="10" tabindex="3" placeholder="В свободной форме"></textarea>
+            </div>
+            <button class="button" type="submit">Отправить</button>
+          </form>
         </div>
-        <p class="disclaimer">Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>»</p>
-    </footer>
 
-      <div id="request-form" class="modal-window">
-        <h3>Напишите нам</h3>
-        <button type="button" class="button-close">
-          <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"><path fill="#FB565A" d="M13.328 10.5l7.371-7.371a1.003 1.003 0 0 0 0-1.414L19.285.3a1.003 1.003 0 0 0-1.414 0L10.5 7.672 3.129.301a1.003 1.003 0 0 0-1.414 0L.301 1.715a1.003 1.003 0 0 0 0 1.414L7.672 10.5.301 17.871a1.003 1.003 0 0 0 0 1.414l1.415 1.414a1.003 1.003 0 0 0 1.414 0l7.371-7.371 7.371 7.371a1.003 1.003 0 0 0 1.414 0l1.414-1.414a1.003 1.003 0 0 0 0-1.414L13.328 10.5z"/></svg>
-          <span class="visually-hidden">Закрыть</span>
-        </button>
-        <form class="request-text" action="https://echo.htmlacademy.ru" method="post">
-          <div class="request-text-input">
-            <label for="request-text-name">Ваше имя:</label>
-            <input id="request-text-name" type="text" name="name" placeholder="Имя Фамилия" tabindex="1" required>
-          </div>
-          <div class="request-text-input">
-            <label for="request-text-email">Ваш email:</label>
-            <input id="request-text-email" type="email" name="email"
-            placeholder="email@example.com" tabindex="2" required>
-          </div>	
-          <div class="request-text-input textarea">
-            <label for="request-text-message">Текст письма:</label>
-            <textarea name="text" id="request-text-message" rows="10" tabindex="3" placeholder="В свободной форме" required></textarea>
-          </div>
-          <button class="button" type="submit">Отправить</button>
-        </form>
-      </div>
-
-      <script src="js/script.js"></script>
+        <script src="js/script.js"></script>
     </body>
   </html>

@@ -10,10 +10,12 @@ var messageInput = form.querySelector('#request-text-message');
 var isStorageSupport = true;
 var nameStorage = '';
 var emailStorage = '';
+var messageStorage = '';
 
 try {
 	nameStorage = localStorage.getItem('name');
 	emailStorage = localStorage.getItem('email');
+	messageStorage = localStorage.getItem('text');
 } catch (err) {
 	isStorageSupport = false;
 }
@@ -36,7 +38,7 @@ button.addEventListener ('click', function(evt) {
     	emailInput.focus();
     } else {
         messageInput.focus();
-    }
+	}
 });
 
 form.addEventListener('submit', function(evt) {
@@ -55,16 +57,26 @@ form.addEventListener('submit', function(evt) {
 	else {
 		emailInput.classList.remove('invalid');
 	}
+
+	if (!messageInput.value) {
+		evt.preventDefault();
+		messageInput.classList.add('invalid');
+	}
+	else {
+		messageInput.classList.remove('invalid');
+	}
 });
 
 function closeModal() {
     modal.classList.remove('modal-show');
 	nameInput.classList.remove('invalid');
 	emailInput.classList.remove('invalid');
+	messageInput.classList.remove('invalid');
 
 	if (isStorageSupport) {
 		localStorage.setItem('name', nameInput.value);
 		localStorage.setItem('email', emailInput.value);
+		localStorage.setItem('text', messageInput.value);
 	}
 };
 

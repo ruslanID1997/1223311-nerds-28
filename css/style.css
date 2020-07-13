@@ -30,7 +30,7 @@
 }
 
 body {
-  min-width: 1180px;
+  min-width: 1160px;
   margin: 0;
   padding: 0;
   font-family: 'Roboto', 'Arial', sans-serif;
@@ -101,6 +101,7 @@ input[type='radio'].visually-hidden {
 .main-header-logo {
   width: 160px;
   height: 65px;
+  flex-shrink: 0;
 }
 
 .main-header-logo:focus {
@@ -789,7 +790,7 @@ input[type='radio'].visually-hidden {
 }
 
 .request-text button {
-  padding-left: 100px;
+  padding-left: 85px;
   padding-right: 85px;
 }
 
@@ -944,8 +945,8 @@ input[type='radio'].visually-hidden {
 }
 
 .wrapper {
-  width: 1180px;
-  padding: 0 20px;
+  width: 1160px;
+  padding: 0 10px;
   margin: 0 auto;
 }
 
@@ -1042,8 +1043,8 @@ input[type='radio'].visually-hidden {
   padding: 0;
   border: 8px solid var(--basic-white);
   background-color: var(--basic-toogle-black);
-  -webkit-box-shadow: 0px, 2px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px, 2px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0 2px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 2px rgba(0, 0, 0, 0.15);
   border-radius: 50%;
   cursor: pointer;
 }
@@ -1308,6 +1309,7 @@ input[type='radio'].visually-hidden {
 .template-list-item svg,
 .template-list-item img {
   display: block;
+  object-fit: cover;
 }
 
 .template-list-item:hover .template-card,
@@ -1316,6 +1318,7 @@ input[type='radio'].visually-hidden {
   -webkit-transition: opacity 0.3s;
   -o-transition: opacity 0.3s;
   transition: opacity 0.3s;
+  background-color: var(--basic-dark-white);
 }
 
 .template-list-item svg {
@@ -1336,8 +1339,6 @@ input[type='radio'].visually-hidden {
   left: 0;
   right: 0;
   padding: 25px 40px 50px;
-  opacity: 0;
-  background-color: var(--basic-dark-white);
   text-align: center;
 }
 
@@ -1362,6 +1363,34 @@ input[type='radio'].visually-hidden {
   -webkit-transition: color 0.3s;
        -o-transition: color 0.3s;
           transition: color 0.3s;
+}
+
+.template-title:focus::before {
+  content: '' ;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  height: 100%;
+  text-align: center;
+  background-color: var(--basic-dark-white);
+}
+
+.template-title, .description, .button-buy {
+  opacity: 0;
+}
+
+.template-list-item:hover .template-title,
+.template-list-item:focus .template-title,
+.template-title:focus ~ .description,
+.template-list-item:hover .description,
+.template-list-item:focus .description,
+.template-title:focus ~ .button-buy,
+.template-list-item:hover .button-buy,
+.template-list-item:focus .button-buy {
+  opacity: 1;
 }
 
 .description {

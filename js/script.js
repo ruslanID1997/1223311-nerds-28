@@ -1,10 +1,15 @@
 var button = document.querySelector('.button-write-window');
 var modal = document.querySelector('#request-form');
-var form = modal.querySelector('.request-text');
 var closebutton = modal.querySelector('.button-close');
+
+var form = modal.querySelector('.request-text');
 var nameInput = form.querySelector('#request-text-name');
 var emailInput = form.querySelector('#request-text-email');
 var messageInput = form.querySelector('#request-text-message');
+
+var isStorageSupport = true;
+var nameStorage = '';
+var emailStorage = '';
 
 try {
 	nameStorage = localStorage.getItem('name');
@@ -34,12 +39,9 @@ button.addEventListener ('click', function(evt) {
     }
 });
 
-form.addEventListener('submit', function(e) {
+form.addEventListener('submit', function(evt) {
 	if (!nameInput.value) {
-        e.preventDefault();
-        modal.classList.remove("modal-error");
-        modal.offsetWidth = modal.offsetWidth;
-        modal.classList.add("modal-error");
+        evt.preventDefault();
 		nameInput.classList.add('invalid');
 	}
 	else {
@@ -47,7 +49,7 @@ form.addEventListener('submit', function(e) {
 	}
 
 	if (!emailInput.value) {
-		e.preventDefault();
+		evt.preventDefault();
 		emailInput.classList.add('invalid');
 	}
 	else {
@@ -57,7 +59,6 @@ form.addEventListener('submit', function(e) {
 
 function closeModal() {
     modal.classList.remove('modal-show');
-    modal.classList.remove("modal-error");
 	nameInput.classList.remove('invalid');
 	emailInput.classList.remove('invalid');
 
@@ -73,12 +74,8 @@ closebutton.addEventListener('click', function(evt) {
 });
 
 window.addEventListener('keydown', function (evt) {
-        if (evt.keyCode === 27) {
-            if (modal.classList.contains("modal-show")) {
-                evt.preventDefault();
-                modal.classList.remove("modal-show");
-                modal.classList.remove("modal-error");
-            evt.preventDefault();
-        }
-    }
+		if (evt.keyCode === 27) {
+			evt.preventDefault();
+			closeModal();
+		}
 });

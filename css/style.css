@@ -667,7 +667,8 @@ input[type='radio'].visually-hidden {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 960px;
-  padding: 70px 100px 80px;
+  padding: 65px 100px 80px;
+  margin-top: -40px;
   position: fixed;
   z-index: 9999;
   top: 10%;
@@ -723,10 +724,6 @@ input[type='radio'].visually-hidden {
   display: block;
   -webkit-animation: bounce 0.6s;
           animation: bounce 0.6s;
-}
-
-.modal-error {
-  animation: shake 0.6s;
 }
 
 .modal-window h3 {

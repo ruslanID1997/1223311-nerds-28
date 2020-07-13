@@ -222,15 +222,15 @@ input[type='radio'].visually-hidden {
 }
 
 .advantages-list-item.slide-1 {
-  background-image: url('../img/nerds-index-slide1_1.png');
+  background-image: url('../img/nerds-index-slide-1.png');
 }
 
 .advantages-list-item.slide-2 {
-  background-image: url('../img/nerds-index-slide2_1.png');
+  background-image: url('../img/nerds-index-slide-2.png');
 }
 
 .advantages-list-item.slide-3 {
-  background-image: url('../img/nerds-index-slide3_1.png');
+  background-image: url('../img/nerds-index-slide-3.png');
 }
 
 .advantages-list-item .advantages-content {
@@ -610,7 +610,7 @@ input[type='radio'].visually-hidden {
 
 .contacts {
   background-color: var(--basic-dark-white);
-  background-image: url(../img/map&maker.jpg);
+  background-image: url(../img/map-marker.jpg);
   background-position: center;
   background-size: cover;
   position: relative;
@@ -1124,8 +1124,8 @@ input[type='radio'].visually-hidden {
 .filter-features-checkbox input:focus ~ span {
   opacity: 1;
   -webkit-transition: opacity 0.3s;
-  -o-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+       -o-transition: opacity 0.3s;
+          transition: opacity 0.3s;
 }
 
 .grid-radio-control input:disabled ~ span,

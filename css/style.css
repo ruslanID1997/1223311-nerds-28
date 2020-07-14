@@ -165,7 +165,9 @@ input[type='radio'].visually-hidden {
 }
 
 .site-navigation-item {
-  margin: 5px 23px 0;
+  margin: 21px 23px 0;
+  padding-bottom: 13px;
+  border-bottom: 2px solid transparent;
 }
 
 .site-navigation-item a {
@@ -182,6 +184,7 @@ input[type='radio'].visually-hidden {
   margin: 5px 0 0 40px;
   outline: none;
   max-width: 100px;
+  border-bottom: 2px solid transparent;
 }
 
 .cart-navigation::before {
@@ -229,12 +232,12 @@ input[type='radio'].visually-hidden {
 
 .advantages-list-item {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   min-height: 400px;
   padding: 60px 0 80px;
   display: none;
-  background-size: contain;
-  background-position: top right 30px;
+  background-size: 760px 431px;
+  background-position: top -21px right 2px;
   background-repeat: no-repeat;
 }
 
@@ -448,7 +451,7 @@ input[type='radio'].visually-hidden {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding: 40px 0 75px;
+  padding: 40px 0 62px;
 }
 
 .about-studios {
@@ -560,7 +563,6 @@ input[type='radio'].visually-hidden {
 .logo-list-item {
   width: 280px;
   min-height: 180px;
-  margin-bottom: -15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -951,6 +953,7 @@ input[type='radio'].visually-hidden {
   padding-top: 55px;
   padding-bottom: 110px;
   background-color: var(--basic-dark-white);
+
 }
 
 .heading h1 {
@@ -1296,7 +1299,7 @@ input[type='radio'].visually-hidden {
   flex-wrap: wrap;
   padding: 0;
   margin: 0 -20px;
-  margin-bottom: -15px;
+  margin-bottom: -2px;
   list-style: none;
 }
 
@@ -1304,7 +1307,7 @@ input[type='radio'].visually-hidden {
   position: relative;
   width: 360px;
   min-height: 616px;
-  margin: 0 20px 32px;
+  margin: 0 20px 27px;
 }
 
 .template-list-image {
@@ -1476,6 +1479,7 @@ input[type='radio'].visually-hidden {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  /* margin-top: 9px; */
 }
 
 .page-numbers .pagination-item {
@@ -1532,6 +1536,14 @@ input[type='radio'].visually-hidden {
   padding-bottom: 70px;
 }
 
-.model-map {
-  display: none;
+.modal-map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-width: 1200px;
+  height: 100%;
+  z-index: 1000;
+  border: none;
 }
+
